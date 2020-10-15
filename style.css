@@ -1,0 +1,280 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.logo,
+nav ul a li,
+.banner, 
+.banner .banner-text,
+.banner a .button,
+#about .heading,
+#about .items *,
+#portfolio,
+#portfolio .flex > *,
+#portfolio .slider,
+#contact > *,
+footer,
+footer .social {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+header {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+.logo {
+    background-image: url(img/web-page-01.png);
+    height: 100px;
+    width: 160px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+.nav-about, .nav-portfolio, .nav-contact {
+    width: 100px;
+    height: 70px;
+    margin-left: 20px;
+}
+.nav-about {
+    background-image: url(img/web-page-02.png);
+}
+.nav-portfolio {
+    background-image: url(img/web-page-03.png);
+}
+.nav-contact {
+    background-image: url(img/web-page-04.png);
+}
+
+.banner, #portfolio {
+    background-position: center, bottom;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.banner {
+    background-image: url(img/web-page-05.png), url(img/web-page-25.png);
+}
+.banner .banner-text {
+    background-image: url(img/web-page-06.png);
+    width: 200px;
+}
+.banner a .button {
+    background-image: url(img/web-page-07.png);
+    width: 150px;
+}
+
+#about .heading {
+    background-image: url(img/web-page-08.png);
+    height: 70px;
+}
+#about .items {
+    display: flex;
+    justify-content: space-evenly;
+}
+#about .items > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+#about .items .image {
+    height: 200px;
+    width: 200px;
+}
+#about .items .text {
+    height: 50px;
+    width: 150px;
+}
+
+#about .items .item1 .image {
+    background-image: url(img/web-page-09.png);
+}
+#about .items .item1 .text {
+    background-image: url(img/web-page-10.png);
+}
+#about .items .item2 .image {
+    background-image: url(img/web-page-11.png);
+}
+#about .items .item2 .text {
+    background-image: url(img/web-page-13.png);
+}
+#about .items .item3 .image {
+    background-image: url(img/web-page-12.png);
+}
+#about .items .item3 .text {
+    background-image: url(img/web-page-14.png);
+}
+
+#portfolio {
+    background-image: url(img/web-page-15.png), url(img/web-page-26.png);
+    position: relative;
+}
+#portfolio .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#portfolio .flex .arrow {
+    height: 40px;
+    width: 40px;
+}
+#portfolio .flex .arrow-left {
+    background-image: url(img/web-page-17.png);
+}
+#portfolio .flex .heading {
+    background-image: url(img/web-page-16.png);
+}
+#portfolio .flex .arrow-right {
+    background-image: url(img/web-page-18.png);
+}
+#portfolio .slider {
+    background-image: url(img/web-page-24.png);
+    height: 30px;
+    width: 250px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 20px;
+}
+
+#contact .heading {
+    background-image: url(img/web-page-19.png);
+    height: 60px;
+}
+#contact .form {
+    background-image: url(img/web-page-20.png);
+    height: 300px;
+    width: 80%;
+    margin: 0 auto;
+}
+#contact .button {
+    background-image: url(img/web-page-21.png);
+}
+
+footer {
+    background-image: url(img/web-page-22.png);
+    background-size: 100% 100px;
+    height: 80px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+footer .social {
+    background-image: url(img/web-page-23.png);
+    height: 60px;
+}
+
+
+
+
+                    /* RESPONSIVE WEB DESIGN */
+
+                        /* MEDIA QUERIES */
+                        /* Mobile first */
+header {
+    display: flex;
+}
+.banner, #portfolio {
+    background-size: 100% 300px, contain;
+    height: 300px;
+    width: 100vw;
+}
+#about, #contact {
+    margin: 10px auto;
+}
+.banner .banner-text {
+    height: 80px;
+    margin: 50px auto 0;
+}
+.banner a .button {
+    height: 50px;
+    margin: 0 auto;
+}
+#about .items {
+    flex-direction: column;
+}
+#portfolio .flex {
+    height: 300px;
+    padding: 0 20px;
+}
+#portfolio .flex .heading {
+    height: 100px;
+    width: 180px;
+}
+#contact .button {
+    height: 40px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media screen and (min-width: 576px) {
+    #about, #contact {
+        margin: 30px auto;
+    }
+    .banner .banner-text {
+        height: 120px;
+    }
+    .banner a .button {
+        height: 70px;
+    }
+    #portfolio .flex .heading {
+        height: 150px;
+        width: 250px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .banner, #portfolio {
+        background-size: 100% 400px, contain;
+        height: 400px;
+    }
+    .banner .banner-text {
+        height: 120px;
+        margin-left: 30px;
+    }
+    .banner a .button {
+        height: 70px;
+        margin-left: 30px;
+    }
+    #portfolio .flex {
+        height: 400px;
+        padding: 0 20px;
+    }
+    #contact .button {
+        height: 70px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+
+@media screen and (min-width: 992px) {
+    #about .items {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #about, #contact {
+        margin: 100px auto;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {}
+
+
+
+                        /* Max-width */
+
+header, .banner, #portfolio, footer {
+    max-width: 1400px;
+}
+
